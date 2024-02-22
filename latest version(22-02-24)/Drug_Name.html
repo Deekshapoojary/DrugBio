@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <section class="header">
+        <nav>
+            <a href="next_page.html"><img src="logotra.png" /></a>
+            <div class="nav-links" id="navLinks">
+                <!-- <i class="fa fa-times" onclick="hideMenu()"></i> -->
+                <ul>
+                    <li><a style="color:#000" href="Drug_Name.html">Drug Name</a></li>
+                    <li><a style="color:#000" href="Drug_Effect.html">Drug Effect</a></li>
+                    <li><a style="color:#000" href="patient_details.html">Patient Details</a></li>
+                </ul>
+            </div>
+            <!-- <i class="fa fa-bars" onclick="showMenu()"></i> -->
+        </nav>
+
+        <div class="DrugName">
+            <h1><center>Find Drugs By Its Name</center></h1>
+            <input type="text" placeholder="Enter Drug Name">
+            <button id="searchButton"><i class="bi bi-search"></i></button>
+        </div>
+
+        <div class="alphabet-container">
+
+            <div class="alphabet-cube" onclick="handleButtonClick('A')">A</div>
+            <div class="alphabet-cube" onclick="handleButtonClick('B')">B</div>
+            <div class="alphabet-cube" onclick="handleButtonClick('C')">C</div>
+            <div class="alphabet-cube" onclick="handleButtonClick('D')">D</div>
+            <div class="alphabet-cube" onclick="handleButtonClick('E')">E</div>
+            <div class="alphabet-cube" onclick="handleButtonClick('F')">F</div>
+            <div class="alphabet-cube" onclick="handleButtonClick('G')">G</div>
+            <div class="alphabet-cube" onclick="handleButtonClick('H')">H</div>
+            <div class="alphabet-cube" onclick="handleButtonClick('I')">I</div>
+            <div class="alphabet-cube" onclick="handleButtonClick('J')">J</div>
+            <div class="alphabet-cube" onclick="handleButtonClick('K')">K</div>
+            <div class="alphabet-cube" onclick="handleButtonClick('L')">L</div>
+            <div class="alphabet-cube" onclick="handleButtonClick('M')">M</div>
+            <div class="alphabet-cube" onclick="handleButtonClick('N')">N</div>
+            <div class="alphabet-cube" onclick="handleButtonClick('O')">O</div>
+            <div class="alphabet-cube" onclick="handleButtonClick('P')">P</div>
+            <div class="alphabet-cube" onclick="handleButtonClick('Q')">Q</div>
+            <div class="alphabet-cube" onclick="handleButtonClick('R')">R</div>
+            <div class="alphabet-cube" onclick="handleButtonClick('S')">S</div>
+            <div class="alphabet-cube" onclick="handleButtonClick('T')">T</div>
+            <div class="alphabet-cube" onclick="handleButtonClick('U')">U</div>
+            <div class="alphabet-cube" onclick="handleButtonClick('V')">V</div>
+            <div class="alphabet-cube" onclick="handleButtonClick('W')">W</div>
+            <div class="alphabet-cube" onclick="handleButtonClick('X')">X</div>
+            <div class="alphabet-cube" onclick="handleButtonClick('Y')">Y</div>
+            <div class="alphabet-cube" onclick="handleButtonClick('Z')">Z</div>
+
+        
+        </div>
+    </section>
+
+    <script>
+        function handleButtonClick(letter) {
+            alert("You clicked on " + letter);
+        
+        }
+    </script>
+</body>
+</html>
