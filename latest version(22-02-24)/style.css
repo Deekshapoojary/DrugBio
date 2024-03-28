@@ -1,0 +1,586 @@
+* {
+  margin: 0;
+  padding: 0;
+  font-family: "Poppins", sans-serif;
+}
+
+img {
+  max-width: 100%;
+  max-height: 100%;
+}
+
+.header img {
+  width: 300px;
+  height: 230px;
+  margin-top: 0%;
+  position: absolute;
+  top: -5%;
+  left: 0%;
+}
+
+.header {
+  min-height: 100vh;
+  width: 100%;
+  /* background-image: linear-gradient(rgba(4,9,30,0.7),rgba(4,9,30,0.7)),url(people.jpg); */
+  background-position: center;
+  background-size: cover;
+  position: relative;
+}
+
+nav {
+  display: flex;
+  padding: 2% 6%;
+  justify-content: space between;
+  align-items: centers;
+}
+
+nav img {
+  width: 100px;
+}
+
+.nav-links {
+  flex: 1;
+  text-align: right;
+}
+
+.nav-links ul li {
+  list-style: none;
+  display: inline-block;
+  padding: 8px 12px;
+  position: relative;
+}
+
+.nav-links ul li a {
+  color: #fff;
+  text-decoration: none;
+  font-size: 13px;
+  font: bold;
+  font-size: 15px;
+}
+
+.nav-links ul li::after {
+  content: "";
+  width: 0%;
+  height: 2px;
+  background: #f44336;
+  display: inline-block;
+  margin: auto;
+  transition: 0.5s;
+}
+
+.nav-links ul li:hover::after {
+  width: 100%;
+}
+
+.text-box {
+  width: 90%;
+  color: lightskyblue;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+}
+.text-box h1 {
+  font-size: 62px;
+}
+
+.text-box p {
+  margin: 10px 0 40px;
+  font-size: 14px;
+  color: #fff;
+}
+.hero-btn {
+  display: inline-block;
+  text-decoration: none;
+  color: #fff;
+  border: 1px solid #fff;
+  padding: 12px 34px;
+  font: size 13px;
+  background: transparent;
+  position: relative;
+  cursor: pointer;
+}
+.hero-btn:hover {
+  border: 1px solid lightskyblue;
+  background:lightskyblue;
+  transition: 1s;
+}
+
+.nav-links i {
+  font-size: 22px;
+  color: #fff;
+  cursor: pointer;
+}
+
+#imageContentContainer img {
+  max-width: 100%;
+  height: auto;
+  max-height: 200px; /* Set the maximum height as needed */
+  display: block;
+  margin: 0 auto; /* Center the image */
+
+}
+.nav-links ul li {
+  position: relative;
+}
+
+.dropdown-content {
+  display: none;
+  position: absolute;
+  min-width: 160px;
+  z-index: 1;
+}
+
+.dropdown-content ul {
+  list-style: none;
+  padding: 1;
+}
+
+.dropdown-content ul li {
+  padding: 18px;
+}
+
+.dropdown:hover .dropdown-content {
+  display: block;
+}
+
+
+/* --------info-------- */
+
+.info {
+  width: 80%;
+  margin: auto;
+  text-align: center;
+  padding-top: 100px;
+}
+
+h1 {
+  font-size: 36px;
+  font-weight: 600;
+}
+
+p {
+  color: #777;
+  font-size: 14px;
+  font-weight: 300;
+  line-height: 22px;
+  padding: 10px;
+}
+
+.row {
+  margin-top: 5%;
+  display: flex;
+  justify-content: space-between;
+}
+.info-col {
+  flex-basis: 31%;
+  background: rgb(158, 203, 230);
+  border-radius: 10px;
+  margin-bottom: 5%;
+  padding: 20px 12px;
+  box-sizing: border-box;
+}
+
+h3 {
+  text-align: center;
+  font-weight: 600;
+  margin: 10px 0;
+}
+
+.info-col:hover {
+  box-shadow: 0 0 20px 0px rgba(0, 0, 0, 0.2);
+}
+
+/* -----------call to action---------- */
+
+.cta {
+  margin: 100px auto;
+  width: 80%;
+  background-image: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)),
+    url(botton.jpg);
+  background-position: center;
+  background-size: cover;
+  border-radius: 10px;
+  text-align: center;
+  padding: 100px 0;
+}
+
+.cta h1 {
+  color: #fff;
+  margin-bottom: 40px;
+  padding: 0;
+}
+
+
+/* ----------about us page--------- */
+.AboutUs {
+  min-height: 800px;
+  width: 100%;
+  /* background-image: linear-gradient(rgba(4,9,30,0.7),rgba(4,9,30,0.7)),url(AboutImg.jpg); */
+  background-position: center;
+  background-size: cover;
+  position: relative;
+  margin-top: -1%;
+}
+
+.container {
+  width: 50%;
+  height: 800px;
+  background-color: rgba(175, 166, 166, 0.5);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.container h1 {
+  text-align: center;
+  color:red;
+}
+.container p {
+  color: #000; /* Dark black color */
+  /* margin-top:1%;
+    display:flex;
+    justify-content: space-between; */
+  font-size: 25px;
+  margin-bottom: 20%;
+  line-height: 30px;
+}
+
+/* -----------icon 2----- */
+
+.icon2 {
+  width: 100%;
+  height: 200px;
+  margin-top: 1%;
+  box-shadow: 40%;
+  background-color: whitesmoke;
+}
+
+.icon2 {
+  width: 100%;
+  text-align: center;
+  padding: 30px 0;
+}
+
+.icon2.fa {
+  color: #f44336;
+  margin: 0 13px;
+  cursor: pointer;
+  padding: 18px 0;
+  border-radius: 10px;
+}
+
+.icon-info {
+  display: flex;
+  justify-content: center;
+}
+
+.icon2 {
+  display: flex;
+}
+
+.icon2 p {
+  margin: 0; /* Remove default paragraph margins */
+  text-align: center;
+  white-space: nowrap;
+  font-size: 45px; /* Adjust the font size as needed */
+  margin-right: 200px; /* Adjust the margin between the icon and text */
+  margin-top: 2%;
+  padding-left: 55px;
+  color:lightskyblue;
+}
+
+.icon2 i {
+  margin-right: 10px; /* Adjust the margin between the icon and text */
+  margin-bottom: 30px;
+}
+
+/* ---------------patient_details--------- */
+
+.patient_details {
+  min-height: 100vh;
+  width: 100%;
+  background-image: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)),
+    url(login_image.jpg);
+  background-position: center;
+  background-size: cover;
+  position: relative;
+}
+
+.login {
+  font-family: Arial, sans-serif;
+  background-color: #f4f4f4;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+}
+
+/* ------------------Drug Name---------- */
+
+/* Centering the search input */
+.DrugName {
+  text-align: center;
+  margin-top: 50px; /* Adjust this value as needed */
+}
+
+/* Styling the search input */
+.DrugName input[type="text"] {
+  width: 800px; /* Adjust width as needed */
+  height: 30px;
+  padding: 10px;
+  margin-top: 10px;
+  border: 2px solid #ccc;
+  border-radius: 5px;
+  font-size: 18px; /* Adjust font size as needed */
+  outline: none;
+}
+
+/* Styling the placeholder text */
+.DrugName input[type="text"]::placeholder {
+  color: #999;
+  font-style: normal;
+}
+
+/* ---------for search bar--------- */
+
+.alphabet-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  width: 50%;
+  margin: 0 auto;
+  margin-top: 30px;
+}
+
+.alphabet-cube {
+  width: 60px;
+  height: 50px;
+  background-color: white;
+  color: black;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 24px;
+  border: 2px solid #000;
+  border-radius: 10px;
+  cursor: pointer;
+}
+
+/* Hover effect */
+.alphabet-cube:hover {
+  background-color: gray;
+}
+
+/* ---------------footer------------- */
+
+footer{
+    display: flex;
+    flex-wrap: wrap;
+    margin-top: auto;
+    background-color:rgb(112, 167, 201);
+    padding: 60px 10%;
+}
+
+ul{
+    list-style: none;
+}
+
+.footer-col{
+    width: 25%;
+}
+
+.footer-col h4{
+    position: relative;
+    margin-bottom: 30px;
+    font-weight: 400;
+    font-size: 22px;
+    color: #f1bc0d;
+    text-transform: capitalize;
+}
+
+.footer-col h4::before{
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: -6px;
+    background-color: #27c0ac;
+    height: 2px;
+    width: 40px;
+}
+
+ul li:not(:last-child){
+    margin-bottom: 8px;
+}
+
+ul li a{
+    display: block;
+    font-size: 19px;
+    text-transform: capitalize;
+    color: #bdb6b6;
+    text-decoration: none;
+    transition: 0.4s;
+}
+
+ul li a:hover{
+    color: white;
+    padding-left: 2px;
+}
+
+.links a{
+    display: inline-block;
+    height: 44px;
+    width: 44px;
+    color: white;
+    background-color: rgba(40, 130, 214, 0.8);
+    margin: 0 8px 8px 0;
+    text-align: center;
+    line-height: 44px;
+    border-radius: 50%;
+    transition: 0.4s;
+}
+
+.links a:hover{
+    color: #4d4f55;
+    background-color: white;
+}
+
+@media(max-width: 740px){
+    .footer-col{
+        width: 50%;
+        margin-bottom: 30px;
+        text-align: center;
+    }
+
+    .footer-col h4::before{
+        all: unset;
+    }
+}
+
+@media(max-width: 555px){
+    .footer-col{
+        width: 100%;
+    }
+}
+
+/* -------------------modal------ */
+/* CSS for modal */
+.modal {
+  display: none; /* Hidden by default */
+  position: fixed; /* Stay in place */
+  z-index: 1; /* Sit on top */
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  overflow: auto; /* Enable scroll if needed */
+  background-color: rgba(0, 0, 0, 0.4); /* Black w/ opacity */
+}
+
+.modal-content {
+  background-color: #fefefe;
+  margin: 8% auto; /* 10% from the top and centered horizontally */
+  padding: 20px;
+  border: 1px solid #888;
+  height:70vh;
+  max-width: 900px; /* Set maximum width if needed */
+}
+
+.close {
+  color: #aaa;
+  float: right;
+  font-size: 28px;
+  font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+  color: black;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+/* -----------------forget password---------- */
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* 
+ @media (min-width: 701px) {
+    .nav-links i.fa-times,
+    .nav-links i.fa-bars {
+        display: none;
+    }
+} */
+
+/* nav.fa{
+    display:none;
+} */
+
+/* 
+@media(max-width:700px){
+    .nav-links i.fa-times,
+    .nav-links i.fa-bars {
+        display: block;
+    } */
+
+/* @media(max-width:700px){
+        .text-box h1{
+            font-size:20px;
+        }
+    }
+    .nav-links ul li{
+        display:block;
+    }
+
+    Additional styles for small devices...
+    .nav-links{
+        position:absolute;
+        background:#f44336;
+        height:100vh;
+        width:200px;
+        top:0;
+        right:-200;
+        text-align:left;
+        z-index:2;
+    }
+    nav.fa{
+        display:block;
+        color:#fff;
+        margin:10px;
+        font-size: 22px;
+        cursor:pointer;
+    }
+
+    .nav-links ul{
+        padding:30px;
+    } */
