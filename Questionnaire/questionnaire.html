@@ -1,0 +1,359 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Pharmaceutical Drug Side Effects Questionnaire</title>
+<style>
+
+body {
+    background: url("sipht.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    overflow: auto;
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+}
+
+.container {
+  max-width: 50%;
+  margin: 0 auto; /* Center horizontally */
+  padding: 20px;
+  border-radius: 8px;
+  background-color: rgba(100, 239, 218, 0.8); /* Added background color for better readability */
+  position: relative; /* Added position relative for absolute positioning of header */
+  top: 50%; /* Shift container 50% down from top */
+  transform: translateY(-50%); /* Adjust vertically */
+}
+
+h1 {
+  text-align: center;
+  color: #333;
+}
+
+form {
+  margin-top: 20px;
+  background-color: rgba(255, 255, 255, 0.8); /* Added background color for better readability */
+  padding: 20px; /* Added padding for better spacing */
+  border-radius: 8px;
+}
+
+label {
+  display: block;
+  margin-bottom: 5px;
+  color: #333;
+  font-weight: bold;
+}
+
+input[type="text"],
+input[type="email"],
+input[type="number"],
+textarea,
+select {
+  width: calc(100% - 22px); /* Adjusted width to account for padding */
+  padding: 10px;
+  margin-bottom: 10px;
+  border: 1px solid white;
+  border-radius: 5px;
+  font-size: 16px;
+  background-color: transparent;
+  transition: border-color 0.3s;
+}
+
+input[type="text"]:focus,
+input[type="email"]:focus,
+input[type="number"]:focus,
+textarea:focus,
+select:focus {
+  border-color: #45a049;
+}
+
+textarea {
+  height: 100px;
+}
+
+input[type="submit"] {
+  background-color: #4caf50;
+  color: #fff;
+  border: none;
+  padding: 12px 20px;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 16px;
+  transition: background-color 0.3s;
+}
+
+input[type="submit"]:hover {
+  background-color: #45a049;
+}
+
+@media screen and (max-width: 600px) {
+  .container {
+    padding: 10px;
+  }
+}
+
+.header img {
+  width: 300px;
+  height: 230px;
+  position: absolute;
+  top: -9%;
+  left: 0;
+}
+
+.header {
+  min-height: 100vh;
+  width: 100%;
+  background-position: center;
+  background-size: cover;
+  position: relative;
+}
+
+nav {
+  display: flex;
+  padding: 2% 6%;
+  justify-content: space-between;
+  align-items: center;
+}
+
+nav img {
+  width: 100px;
+}
+
+.nav-links {
+  flex: 1;
+  text-align: right;
+}
+
+.nav-links ul li {
+  list-style: none;
+  display: inline-block;
+  padding: 8px 12px;
+  position: relative;
+}
+
+.nav-links ul li a {
+  color: #fff;
+  text-decoration: none;
+  font-size: 15px;
+}
+
+.nav-links ul li::after {
+  content: "";
+  width: 0%;
+  height: 2px;
+  background: #f44336;
+  display: inline-block;
+  margin: auto;
+  transition: 0.5s;
+}
+
+.nav-links ul li:hover::after {
+  width: 100%;
+}
+
+footer {
+  display: flex;
+  flex-wrap: wrap;
+  margin-top: auto;
+  background-color: rgb(112, 167, 201);
+  padding: 60px 10%;
+}
+
+ul {
+  list-style: none;
+}
+
+.footer-col {
+  width: 25%;
+}
+
+.footer-col h4 {
+  position: relative;
+  margin-bottom: 30px;
+  font-weight: 400;
+  font-size: 22px;
+  color: #f1bc0d;
+  text-transform: capitalize;
+}
+
+.footer-col h4::before {
+  content: '';
+  position: absolute;
+  left: 0;
+  bottom: -6px;
+  background-color: #27c0ac;
+  height: 2px;
+  width: 40px;
+}
+
+ul li:not(:last-child) {
+  margin-bottom: 8px;
+}
+
+ul li a {
+  display: block;
+  font-size: 19px;
+  text-transform: capitalize;
+  color: #bdb6b6;
+  text-decoration: none;
+  transition: 0.4s;
+}
+
+ul li a:hover {
+  color: white;
+  padding-left: 2px;
+}
+
+.links a {
+  display: inline-block;
+  height: 44px;
+  width: 44px;
+  color: white;
+  background-color: rgba(40, 130, 214, 0.8);
+  margin: 0 8px 8px 0;
+  text-align: center;
+  line-height: 44px;
+  border-radius: 50%;
+  transition: 0.4s;
+}
+
+.links a:hover {
+  color: #4d4f55;
+  background-color: white;
+}
+
+
+</style>
+
+</head>
+<body>
+
+<section class="header">
+<nav>
+  <a href="next_page.html"> <img src="logotran.png" /></a>
+  <div class="nav-links" id="navLinks">
+    <ul>
+      <li><a style="color:#000" href="drugname.php">Drug Name</a></li>
+      <li><a style="color:#000" href="Drug_Effect.html">Drug Effect</a></li>
+      <li><a style="color:#000" href="patient_details.html">Patient Details</a></li>
+    </ul>
+  </div>
+</nav>
+</section>
+
+<div class="container" id="sideEffectForm">
+<h1>Pharmaceutical Drug Side Effects Questionnaire</h1>
+<form action="storedata2.php" method="post">
+  <label for="name">Your Name:</label>
+  <input type="text" id="name" name="name" required>
+
+  <label for="email">Your Email:</label>
+  <input type="email" id="email" name="email" required>
+
+  <label for="age">Your Age:</label>
+  <input type="number" id="age" name="age" required>
+
+  <label for="gender">Your Gender:</label>
+  <select id="gender" name="gender" required>
+    <option value="">Select Gender</option>
+    <option value="Male">Male</option>
+    <option value="Female">Female</option>
+    <option value="Other">Other</option>
+  </select>
+
+  <label for="drugName">Pharmaceutical Drug Name:</label>
+  <input type="text" id="Drug_name" name="Drug_name" required>
+
+  <label for="quantity">Quantity of Drug Taken:</label>
+  <input type="text" id="Drug_quantity" name="Drug_quantity" required>
+
+  <label for="sideEffect">Describe the Side Effect(seperated by commas):</label>
+  <textarea id="side_effects" name="side_effects" required></textarea>
+
+  <label for="severity">Severity of Side Effect:</label>
+  <select id="severity_effect" name="severity_effect" required>
+    <option value="">Select Severity</option>
+    <option value="Mild">Mild</option>
+    <option value="Moderate">Moderate</option>
+    <option value="Severe">Severe</option>
+  </select>
+
+  <label for="duration">Duration of Side Effect (in days):</label>
+  <input type="number" id="duration_effect" name="duration_effect" required>
+
+  <label for="otherMedications">Other Medications You Are Taking:</label>
+  <textarea id="Other_medication" name="Other_medication"></textarea>
+
+  <label for="medicalHistory">Medical History (if any):</label>
+  <textarea id="Medical_history" name="Medical_history"></textarea>
+
+  <input type="submit" value="Submit">
+</form>
+</div>
+
+<footer>
+<div class="footer-col">
+<h4>products</h4>
+<ul>
+  <li><a href="#">teams</a></li>
+  <li><a href="#">advertising</a></li>
+  <li><a href="#">talent</a></li>
+</ul>
+</div>
+<div class="footer-col">
+<h4>network</h4>
+<ul>
+  <li><a href="#">technology</a></li>
+  <li><a href="#">science</a></li>
+  <li><a href="#">business</a></li>
+  <li><a href="#">professional</a></li>
+  <li><a href="#">API</a></li>
+</ul>
+</div>
+<div class="footer-col">
+<h4>company</h4>
+<ul>
+  <li><a href="#">about</a></li>
+  <li><a href="#">legal</a></li>
+  <li><a href="#">contact us</a></li>
+</ul>
+</div>
+<div class="footer-col">
+<h4>follow us</h4>
+<div class="links">
+  <a href="#"><i class="fab fa-linkedin-in"></i></a>
+  <a href="#"><i class="fab fa-facebook-f"></i></a>
+  <a href="#"><i class="fab fa-twitter"></i></a>
+  <a href="#"><i class="fab fa-instagram"></i></a>
+</div>
+</div>
+</footer>
+<script>
+// Extract the value of the side_effects input field
+var sideEffectsValue = document.getElementById('side_effects').value;
+
+// Create FormData object with only the side_effects field
+var formData = new FormData();
+formData.append('side_effects', sideEffectsValue);
+
+// Send the data to algorithm.py
+fetch('algorithm.py', {
+    method: 'POST',
+    body: formData
+})
+.then(response => response.text())
+.then(data => {
+    // Handle response from the Python script
+    console.log(data);
+    // You can update the UI or perform any other actions based on the response
+})
+.catch(error => {
+    console.error('Error:', error);
+});
+
+</script>
+</body>
+</html>
