@@ -12,6 +12,10 @@ include 'connect.php';
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Drug Details</title>
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.4.2/css/all.min.css"
+    />
     <style>
         * {
             margin: 0;
@@ -21,7 +25,7 @@ include 'connect.php';
         }
 
         body {
-            background: url("patient_details_img.jpg");
+            background: url("helllllllooo.avif");
             background-size: cover;
             background-repeat: no-repeat;
             background-attachment: fixed;
@@ -127,83 +131,136 @@ include 'connect.php';
             
         }
         
+        /* ---------------------table------------- */
+
+        .table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 20px;
+        }
+
+        .table th, .table td {
+            padding: 8px;
+            text-align: left;
+        }
+
+        .table th {
+            background-color: #f2f2f2;
+            border-bottom: 2px solid #ddd;
+        }
+
+        .table tbody tr:nth-child(even) {
+            background-color: #f2f2f2;
+        }
+
+        .table tbody tr:hover {
+            background-color: #ddd;
+        }
       
        
        
         
 
         /* -----------------footer------------ */
+        footer {
+  background-color: lightblue;
+  color: white;
+  padding: 20px 0;
+  text-align: center; /* Center align all content within the footer */
+}
 
-        footer{
-            display: flex;
-            flex-wrap: wrap;
-            margin-top: auto;
-            background-color:rgb(112, 167, 201);
-            padding: 60px 10%;
-        }
+.footerContainer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  max-width: 1200px;
+  margin: 0 auto;
+}
 
-        ul{
-            list-style: none;
-        }
+.socialIcons {
+  display: inline-block;
+  width: 40vw;
+  height: 10vh;
+  margin-left: 350px;
+}
 
-        .footer-col{
-            width: 25%;
-        }
+.socialIcons a {
+  text-decoration: none;
+  padding: 10px;
+  margin: 0 20px;
+  border-radius: 50%;
+  background-color: white;
+  color: black;
+  position: relative;
+  top: 10px;
+}
 
-        .footer-col h4{
-            position: relative;
-            margin-bottom: 30px;
-            font-weight: 400;
-            font-size: 22px;
-            color: #f1bc0d;
-            text-transform: capitalize;
-        }
+.socialIcons a i {
+  font-size: 2em;
+  color: black;
+  opacity: 0.9;
+  position: relative;
+  top: 10px;
+}
 
-        .footer-col h4::before{
-            content: '';
-            position: absolute;
-            left: 0;
-            bottom: -6px;
-            background-color: #27c0ac;
-            height: 2px;
-            width: 40px;
-        }
+.socialIcons a:hover {
+  background-color: #111;
+  transition: background-color 0.5s;
+}
 
-        ul li:not(:last-child){
-            margin-bottom: 8px;
-        }
+.socialIcons a:hover i {
+  color: white;
+  transition: color 0.5s;
+}
 
-        ul li a{
-            display: block;
-            font-size: 19px;
-            text-transform: capitalize;
-            color: #bdb6b6;
-            text-decoration: none;
-            transition: 0.4s;
-        }
+.footerNav {
+  width:70vw;
+  margin-top: 120px; 
+  margin-left: -1000px;
+  /* Add margin to create space between socialIcons and footerNav */
+}
 
-        ul li a:hover{
-            color: white;
-            padding-left: 2px;
-        }
+.footerNav ul {
+  list-style-type: none;
+  display: flex;
+  justify-content: center;
+}
 
-        .links a{
-            display: inline-block;
-            height: 44px;
-            width: 44px;
-            color: white;
-            background-color: rgba(40, 130, 214, 0.8);
-            margin: 0 8px 8px 0;
-            text-align: center;
-            line-height: 44px;
-            border-radius: 50%;
-            transition: 0.4s;
-        }
+.footerNav ul li {
+  margin: 0 20px; /* Adjust margin for spacing between navigation links */
+}
 
-        .links a:hover{
-            color: #4d4f55;
-            background-color: white;
-        }
+.footerNav ul li a {
+  color: white;
+  text-decoration: none;
+  font-size: 1.3em;
+  opacity: 0.7;
+  transition: color 0.5s;
+}
+
+.footerNav ul li a:hover {
+  opacity: 1;
+  color: #000;
+}
+
+.footerBottom {
+  background-color: lightblue;
+  padding: 20px;
+  text-align: center; /* Center align text in the footer bottom */
+}
+
+.footerBottom p {
+  color: white;
+  margin-left: 100px;
+}
+
+.designer {
+  opacity: 0.7;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  font-weight: 400;
+}
+
 
     </style>
 </head>
@@ -303,44 +360,29 @@ include 'connect.php';
         </div>
     </div>
 
-        
     <footer>
-    <div class="footer-col">
-        <h4>products</h4>
-        <ul>
-            <li><a href="#">teams</a></li>
-            <li><a href="#">advertising</a></li>
-            <li><a href="#">talent</a></li>
-        </ul>
-    </div>
-    <div class="footer-col">
-        <h4>network</h4>
-        <ul>
-            <li><a href="#">technology</a></li>
-            <li><a href="#">science</a></li>
-            <li><a href="#">business</a></li>
-            <li><a href="#">professional</a></li>
-            <li><a href="#">API</a></li>
-        </ul>
-    </div>
-    <div class="footer-col">
-        <h4>company</h4>
-        <ul>
-            <li><a href="#">about</a></li>
-            <li><a href="#">legal</a></li>
-            <li><a href="#">contact us</a></li>
-        </ul>
-    </div>
-    <div class="footer-col">
-        <h4>follow us</h4>
-        <div class="links">
-            <a href="#"><i class="fab fa-linkedin-in"></i></a>
-            <a href="#"><i class="fab fa-facebook-f"></i></a>
-            <a href="#"><i class="fab fa-twitter"></i></a>
-            <a href="#"><i class="fab fa-instagram"></i></a>
+        <div class="footerContainer">
+          <div class="socialIcons">
+            <a href=""><i class="fa-brands fa-facebook"></i></a>
+            <a href=""><i class="fa-brands fa-instagram"></i></a>
+            <a href=""><i class="fa-brands fa-twitter"></i></a>
+          </div>
+          <div class="footerNav">
+            <ul>
+              <li><a href="">Home</a></li>
+              <li><a href="">About</a></li>
+              <li><a href="">Contact Us</a></li>
+              <li><a href="">our Team</a></li>
+            </ul>
+          </div>
         </div>
-    </div>
-    </footer>
+        <div class="footerBottom">
+          <p>
+            Copyright &copy;2024; Designed by
+            <span class="designer">AakDeeAyi</span>
+          </p>
+        </div>
+      </footer>
 <script>
     document.getElementById("searchBtn").addEventListener("click", function() {
         // Hide the search button and show the stop button
