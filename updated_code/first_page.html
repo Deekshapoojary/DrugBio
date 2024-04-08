@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Cover Page</title>
+  <style>
+    body {
+      margin: 0;
+      overflow: hidden;
+    }
+
+    video {
+      position: fixed;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      z-index: 1;
+      width: 50%; /* Adjust the width as needed */
+      height: auto; /* Maintain aspect ratio */ /* Adjust the maximum height as needed */
+    }
+  </style>
+</head>
+<body>
+
+<video id="video" src="mainlogovideo.mp4" autoplay muted controls></video>
+
+<script>
+  // Wait for 10 seconds and then redirect to the next page
+  setTimeout(function() {
+    window.location.href = "next_page.html";
+  }, 10000); // 10000 milliseconds = 10 seconds
+</script>
+
+</body>
+</html>

@@ -1,0 +1,407 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Pharmaceutical Drug Side Effects Questionnaire</title>
+
+<link
+rel="stylesheet"
+href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.4.2/css/all.min.css"
+/>
+
+<style>
+
+body {
+    background: url("backgroundimg12.avif");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    overflow: auto;
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+}
+
+.container {
+  max-width: 60%;
+  margin-top:-38%;
+  margin-left:20%;
+  padding: 40px;
+  border-radius: 20px;
+
+  position: relative;
+}
+
+h1 {
+  text-align: center;
+  color: white;
+  margin-bottom: 30px;
+}
+
+form {
+  
+  padding: 30px;
+  border-radius: 10px;
+  
+}
+
+label {
+  display: block;
+  margin-bottom: 10px;
+  color: white;
+  font-weight: bold;
+}
+
+.input-field {
+  margin-bottom: 20px;
+}
+
+.input-field input,
+.input-field select,
+.input-field textarea {
+  width: 100%;
+  padding: 12px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  font-size: 16px;
+  background-color: transparent; /* changed to transparent */
+  transition: box-shadow 0.3s, background-color 0.3s; /* added background-color transition */
+}
+
+.input-field input:focus,
+.input-field select:focus,
+.input-field textarea:focus {
+  outline: none;
+  border-color: #45a049;
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.3);
+  background-color: #f2f2f2; /* highlight color on focus */
+}
+
+textarea {
+  height: 100px;
+}
+
+select {
+  padding: 12px;
+}
+
+.submit-btn {
+  background-color: #4caf50;
+  color: #fff;
+  border: none;
+  padding: 14px 20px;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 16px;
+  transition: background-color 0.3s;
+}
+
+.submit-btn:hover {
+  background-color: #45a049;
+}
+
+@media screen and (max-width: 768px) {
+  .container {
+    max-width: 80%;
+  }
+}
+
+
+
+.header img {
+  width: 300px;
+  height: 230px;
+  position: absolute;
+  top: -9%;
+  left: 0;
+}
+
+.header {
+  min-height: 100vh;
+  width: 100%;
+  background-position: center;
+  background-size: cover;
+  position: relative;
+}
+
+nav {
+  display: flex;
+  padding: 2% 6%;
+  justify-content: space-between;
+  align-items: center;
+}
+
+nav img {
+  width: 100px;
+}
+
+.nav-links {
+  flex: 1;
+  text-align: right;
+}
+
+.nav-links ul li {
+  list-style: none;
+  display: inline-block;
+  padding: 8px 12px;
+  position: relative;
+}
+
+.nav-links ul li a {
+  color: #fff;
+  text-decoration: none;
+  font-size: 15px;
+}
+
+.nav-links ul li::after {
+  content: "";
+  width: 0%;
+  height: 2px;
+  background: #f44336;
+  display: inline-block;
+  margin: auto;
+  transition: 0.5s;
+}
+
+.nav-links ul li:hover::after {
+  width: 100%;
+}
+/* -------------------footer------------ */
+footer {
+  background-color: lightblue;
+  color: white;
+  padding: 20px 0;
+  text-align: center; /* Center align all content within the footer */
+}
+
+.footerContainer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.socialIcons {
+  display: inline-block;
+  width: 40vw;
+  height: 10vh;
+  margin-left: 350px;
+}
+
+.socialIcons a {
+  text-decoration: none;
+  padding: 10px;
+  margin: 0 20px;
+  border-radius: 50%;
+  background-color: white;
+  color: black;
+  position: relative;
+  top: 10px;
+}
+
+.socialIcons a i {
+  font-size: 2em;
+  color: black;
+  opacity: 0.9;
+  position: relative;
+  top: 10px;
+}
+
+.socialIcons a:hover {
+  background-color: #111;
+  transition: background-color 0.5s;
+}
+
+.socialIcons a:hover i {
+  color: white;
+  transition: color 0.5s;
+}
+
+.footerNav {
+  width:70vw;
+  margin-top: 120px; 
+  margin-left: -1000px;
+  /* Add margin to create space between socialIcons and footerNav */
+}
+
+.footerNav ul {
+  list-style-type: none;
+  display: flex;
+  justify-content: center;
+}
+
+.footerNav ul li {
+  margin: 0 20px; /* Adjust margin for spacing between navigation links */
+}
+
+.footerNav ul li a {
+  color: white;
+  text-decoration: none;
+  font-size: 1.3em;
+  opacity: 0.7;
+  transition: color 0.5s;
+}
+
+.footerNav ul li a:hover {
+  opacity: 1;
+  color: #000;
+}
+
+.footerBottom {
+  background-color: lightblue;
+  padding: 20px;
+  text-align: center; /* Center align text in the footer bottom */
+}
+
+.footerBottom p {
+  color: white;
+  margin-left: 100px;
+}
+
+.designer {
+  opacity: 0.7;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  font-weight: 400;
+}
+
+
+</style>
+
+</head>
+<body>
+
+<section class="header">
+<nav>
+  <a href="next_page.html"> <img src="logotra.png" /></a>
+  <div class="nav-links" id="navLinks">
+    <ul>
+      <li><a style="color:#000" href="patient_details.php">Patient Details</a></li>
+    </ul>
+  </div>
+</nav>
+</section>
+
+<div class="container" id="sideEffectForm">
+    <h1>Pharmaceutical Drug Side Effects Questionnaire</h1>
+    <form action="result.php" method="post">
+      <div class="input-field">
+        <label for="name">Your Name:</label>
+        <input type="text" id="name" name="name" required>
+      </div>
+    
+      <div class="input-field">
+        <label for="email">Your Email:</label>
+        <input type="email" id="email" name="email" required>
+      </div>
+    
+      <div class="input-field">
+        <label for="age">Your Age:</label>
+        <input type="number" id="age" name="age" required>
+      </div>
+    
+      <div class="input-field">
+        <label for="gender">Your Gender:</label>
+        <select id="gender" name="gender" required>
+          <option value="">Select Gender</option>
+          <option value="Male">Male</option>
+          <option value="Female">Female</option>
+          <option value="Other">Other</option>
+        </select>
+      </div>
+    
+      <div class="input-field">
+        <label for="drugName">Pharmaceutical Drug Name:</label>
+        <input type="text" id="Drug_name" name="Drug_name" required>
+      </div>
+    
+      <div class="input-field">
+        <label for="quantity">Quantity of Drug Taken:</label>
+        <input type="text" id="Drug_quantity" name="Drug_quantity" required>
+      </div>
+    
+      <div class="input-field">
+        <label for="sideEffect">Describe the Side Effect (separated by commas):</label>
+        <textarea id="side_effects" name="side_effects" required></textarea>
+      </div>
+    
+      <div class="input-field">
+        <label for="severity">Severity of Side Effect:</label>
+        <select id="severity_effect" name="severity_effect" required>
+          <option value="">Select Severity</option>
+          <option value="Mild">Mild</option>
+          <option value="Moderate">Moderate</option>
+          <option value="Severe">Severe</option>
+        </select>
+      </div>
+    
+      <div class="input-field">
+        <label for="duration">Duration of Side Effect (in days):</label>
+        <input type="number" id="duration_effect" name="duration_effect" required>
+      </div>
+    
+      <div class="input-field">
+        <label for="otherMedications">Other Medications You Are Taking:</label>
+        <textarea id="Other_medication" name="Other_medication"></textarea>
+      </div>
+    
+      <div class="input-field">
+        <label for="medicalHistory">Medical History (if any):</label>
+        <textarea id="Medical_history" name="Medical_history"></textarea>
+      </div>
+    
+      <input type="submit" value="Submit" class="submit-btn">
+    </form>
+    </div>
+
+<footer>
+    <div class="footerContainer">
+      <div class="socialIcons">
+        <a href=""><i class="fa-brands fa-facebook"></i></a>
+        <a href=""><i class="fa-brands fa-instagram"></i></a>
+        <a href=""><i class="fa-brands fa-twitter"></i></a>
+      </div>
+      <div class="footerNav">
+        <ul>
+          <li><a href="">Home</a></li>
+          <li><a href="">About</a></li>
+          <li><a href="">Contact Us</a></li>
+          <li><a href="">our Team</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footerBottom">
+      <p>
+        Copyright &copy;2024; Designed by
+        <span class="designer">AakDeeAyi</span>
+      </p>
+    </div>
+  </footer>
+<script>
+// Extract the value of the side_effects input field
+var sideEffectsValue = document.getElementById('side_effects').value;
+
+// Create FormData object with only the side_effects field
+var formData = new FormData();
+formData.append('side_effects', sideEffectsValue);
+
+// Send the data to algorithm.py
+fetch('algorithm.py', {
+    method: 'POST',
+    body: formData
+})
+.then(response => response.text())
+.then(data => {
+    // Handle response from the Python script
+    console.log(data);
+    // You can update the UI or perform any other actions based on the response
+})
+.catch(error => {
+    console.error('Error:', error);
+});
+
+</script>
+</body>
+</html>

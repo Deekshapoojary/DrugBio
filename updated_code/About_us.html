@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>DrugBio</title>
+    <link rel="stylesheet" href="style.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.4.2/css/all.min.css"
+    />
+
+  </head>
+  <body>
+    <section class="header">
+      <nav>
+        <a href="next_page.html"> <img src="logotra.png" /></a>
+        <div class="nav-links" id="navLinks">
+          <ul>
+            <li><a style="color: #000" href="drugname.php"> Drug Name</a></li>
+            <li>
+              <a style="color: #000" href="patient_details.php">
+                login</a
+              >
+            </li>
+          </ul>
+        </div>
+      </nav>
+
+      <section class="AboutUs">
+        <div class="container">
+          <h1>Welcome to <span>DrugBio</span></h1>
+          <p>
+            Welcome to our comprehensive online platform focused on the vital
+            task of predicting adverse drug effects. At the core of our mission
+            is a commitment to leveraging advanced data analytics to enhance
+            patient safety and optimize healthcare outcomes. Through meticulous
+            examination of diverse patient data sets encompassing demographics,
+            medical histories, and medication profiles, our dedicated team
+            endeavors to proactively identify potential adverse effects
+            associated with various drugs.
+          </p>
+        </div>
+      </section>
+      
+
+      <!-- ------------------------cards---------------- -->
+
+      <section class="card-section">
+        <div class="card" onclick="expandCard(this)">
+          <h2>Achievement</h2>
+          <p>Achievement in developing highly accurate and reliable machine learning  models that can effectively identify and forecast adverse drug events before they occur, leveraging a diverse range of data sources such as electronic health records, drug databases, and patient-reported outcomes.</p>
+        </div>
+        <div class="card" onclick="expandCard(this)">
+          <h2>Vision</h2>
+          <p>
+            The vision of an Adverse Drug Effect (ADE) prediction  is to revolutionize medication management and patient care by leveraging cutting-edge technology and data-driven approaches to enhance drug safety and optimize therapeutic outcomes.</p>
+        </div>
+        <div class="card" onclick="expandCard(this)">
+          <h2>Mission</h2>
+          <p>The mission of an Adverse Drug Effect prediction  typically revolves around enhancing patient safety, improving healthcare outcomes, and optimizing medication management.</p>
+        </div>
+      </section>
+      <div class="overlay" id="overlay"></div>
+      
+      
+      
+
+      <!-- -------------footer-------------- -->
+
+      <footer>
+        <div class="footerContainer">
+          <div class="socialIcons">
+            <a href="https://www.facebook.com/profile.php?id=61558010492622"><i class="fa-brands fa-facebook"></i></a>
+            <a href="https://www.instagram.com/drugbiosecure/?hl=en"><i class="fa-brands fa-instagram"></i></a>
+            <a href="https://twitter.com/drug_bio"><i class="fa-brands fa-twitter"></i></a>
+          </div>
+          <div class="footerNav">
+            <ul>
+              <li><a href="next_page.html">Home</a></li>
+            <li><a href="About_us.html">About</a></li>
+            <li><a href="contact_us.html">Contact Us</a></li>
+            <li><a href="ourTeam.html">Our Team</a></li>
+            </ul>
+          </div>
+        </div>
+        <div class="footerBottom">
+          <p>
+            Copyright &copy;2024; Designed by
+            <span class="designer">AakDeeAyi</span>
+          </p>
+        </div>
+      </footer>
+    </section>
+
+
+    <script>
+   function expandCard(card) {
+  card.classList.add('expanded');
+  document.querySelectorAll('.card').forEach(item => {
+    if (item !== card) {
+      item.style.opacity = '0.5';
+    }
+  });
+  document.getElementById('overlay').style.display = 'block';
+}
+
+document.getElementById('overlay').addEventListener('click', function() {
+  document.querySelectorAll('.card').forEach(item => {
+    item.classList.remove('expanded');
+    item.style.opacity = '1';
+  });
+  this.style.display = 'none';
+});
+
+
+    </script>
+  </body>
+</html>
