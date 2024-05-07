@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Drug Side Effects Analysis Result</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-image: url("patient_details_img.jpg");
+            background-size: cover;
+            background-repeat: no-repeat;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .card {
+            width: 400px;
+            padding: 20px;
+            border-radius: 10px;
+            background-color: #4B0082; /* Purple background color */
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+            text-align: center;
+            color: #fff; /* White text color */
+            margin-bottom: 20px;
+            flex-grow: 10; /* Allow the card to grow and push the footer to the bottom */
+        }
+
+        .card p {
+            margin: 10px 0;
+            color: #eee; /* Light gray text color */
+        }
+
+        .footerBottom {
+            background-color: lightblue;
+            padding: 10px; /* Reduced padding */
+            text-align: center; /* Center align text in the footer bottom */
+            color: white;
+            width: 100%;
+            box-sizing: border-box;
+            font-size: 14px; /* Reduced font size */
+        }
+
+        .footerBottom .designer {
+            opacity: 0.7;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            font-weight: 400;
+        }
+
+        .result-container {
+            margin-top: 20px;
+        }
+
+            /* Style for the submit button */
+    .save-button {
+        background-color: #4CAF50; /* Green background color */
+        border: none; /* Remove border */
+        color: white; /* White text color */
+        padding: 10px 20px; /* Add padding */
+        text-align: center; /* Center align text */
+        text-decoration: none; /* Remove underline */
+        display: inline-block; /* Make it inline block */
+        font-size: 16px; /* Increase font size */
+        border-radius: 5px; /* Add border radius */
+        cursor: pointer; /* Add pointer cursor */
+    }
+
+    /* Hover effect for the button */
+    .save-button:hover {
+        background-color: #45a049; /* Darker green background color on hover */
+    }
+
+    </style>
+</head>
+<body>
+<div class="card">
+    <h2>Drug Side Effects Analysis Result</h2>
+    <div class="result-container">
+        <p>Name: {{ name }}<span id="name"></span></p>
+        <p>Email ID: {{ email }}<span id="email"></span></p>
+        <p>Gender: {{ gender }}<span id="gender"></span></p>
+        <p>Age: {{ age }}<span id="age"></span></p>
+        <p>Duration of Side Effect: {{ user_symptom_duration }}<span id="user_symptom_duration"></span></p>
+        <p>Drug Name: {{ drug_name }}<span id="drug_name"></span></p>
+        <p>Severity of effect: {{ severity_effect }}<span id="severity_effect"></span></p>
+        <p>Drug Quantity Administered: {{ drug_quantity }}<span id="drug_quantity"></span></p>
+        <p>Side Effects of Drug: {{ side_effects }}<span id="side_effects"></span></p>
+        <p>Other Medication: {{ Other_medication }}<span id="other_medication"></span></p>
+        <p>Medical History: {{ user_input_condition }}<span id="user_input_condition"></span></p>
+        <p>RESULT: {{ result_string }}<span id="result_string"></span></p>
+        
+        <!-- Hidden input fields for all variables -->
+        <form id="dataForm" action="http://127.0.0.1:5000/" method="post">
+            <input type="hidden" id="name" name="name" value="{{ name }}">
+            <input type="hidden" id="email" name="email" value="{{ email }}">
+            <input type="hidden" id="gender" name="gender" value="{{ gender }}">
+            <input type="hidden" id="age" name="age" value="{{ age }}">
+            <input type="hidden" id="duration_effect" name="duration_effect" value="{{ user_symptom_duration }}">
+            <input type="hidden" id="Drug_name" name="Drug_name" value="{{ drug_name }}">
+            <input type="hidden" id="severity_effect" name="severity_effect" value="{{ severity_effect }}">
+            <input type="hidden" id="Drug_quantity" name="Drug_quantity" value="{{ drug_quantity }}">
+            <input type="hidden" id="side_effects" name="side_effects" value="{{ side_effects }}">
+            <input type="hidden" id="Other_medication" name="Other_medication" value="{{ Other_medication }}">
+            <input type="hidden" id="Medical_history" name="Medical_history" value="{{ user_input_condition }}">
+            <input type="hidden" id="RESULT" name="RESULT" value="{{ result_string }}">
+            <input type="submit" value="Save" class="save-button">
+        </form>
+    </div>
+</div>
+
+<footer class="footerBottom">
+    <p>
+        Copyright &copy;2024; Designed by
+        <span class="designer">AakDeeAyi</span>
+    </p>
+</footer>
+</body>
+</html>
